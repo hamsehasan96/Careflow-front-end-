@@ -4,17 +4,18 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "prepare": "exit 0"
+    "prepare": "prisma generate"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
+    "@prisma/client": "^5.10.2",
     "@sentry/node": "^7.107.0",
     "@sentry/profiling-node": "^1.0.0",
     "@types/react-dom": "^18.2.19",
@@ -48,6 +49,7 @@
     "node-cache": "^5.1.2",
     "pg": "^8.11.3",
     "pg-hstore": "^2.3.4",
+    "prisma": "^5.10.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.50.1",
@@ -57,19 +59,18 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3",
     "winston": "^3.11.0",
-    "xss-clean": "^0.1.1",
+    "xss-clean": "^0.1.4",
     "yup": "^1.3.3",
-    "zustand": "^4.5.0",
+    "zustand": "^4.5.1",
     "cookies-next": "^2.1.1",
-    "react-hot-toast": "^2.4.1",
-    "@prisma/client": "^5.10.2"
+    "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.1",
     "@types/jest": "^29.5.12",
-    "@types/node": "^22.14.1",
-    "@types/react": "^18.3.20",
+    "@types/node": "^20.11.19",
+    "@types/react": "^18.2.57",
     "@typescript-eslint/eslint-plugin": "^7.0.1",
     "@typescript-eslint/parser": "^7.0.1",
     "autoprefixer": "^10.4.17",
@@ -81,8 +82,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8.4.35",
     "prettier": "^3.2.5",
-    "ts-jest": "^29.1.2",
-    "prisma": "^5.10.2"
+    "ts-jest": "^29.1.2"
   },
   "resolutions": {
     "@types/react": "^18.2.55"
